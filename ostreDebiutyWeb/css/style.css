@@ -1,0 +1,923 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #292929;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 1.5em;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+.nav__logo img {
+  width: 10rem;
+  height: 7rem;
+}
+.nav__logo h3 {
+  font-size: 2rem;
+}
+.nav__bars {
+  font-size: 4rem;
+  transition: color 0.4s;
+  cursor: pointer;
+}
+.nav__bars:hover {
+  color: #806e2d;
+}
+.nav__item {
+  display: none;
+}
+.nav__item a {
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 0em 1.5em;
+  color: #292929;
+  transition: color 0.3s;
+}
+.nav__item a:hover {
+  color: #806e2d;
+}
+.nav__mobile {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #ffffff;
+  font-size: 3rem;
+  transform: translateX(100%);
+  transition: transform 0.4s;
+}
+.nav__mobile a {
+  text-decoration: none;
+  color: #292929;
+  padding: 1em;
+}
+.nav__mobile .fa-xmark {
+  position: absolute;
+  top: 0.4em;
+  font-size: 5rem;
+  padding: 0 0.5em 1em 0;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+.nav__arrow {
+  font-size: 4rem;
+}
+.nav__arrow a {
+  text-decoration: none;
+  color: #292929;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav__arrow a:hover {
+  color: #806e2d;
+}
+.nav__home {
+  display: none;
+  font-size: 3rem;
+}
+.nav__home a {
+  text-decoration: none;
+  color: #292929;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav__home a:hover {
+  color: #806e2d;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.096);
+}
+.header__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+.header__img img {
+  height: 25rem;
+}
+.header__text {
+  padding: 2em 5em 2em 2em;
+}
+.header__text h1 {
+  font-size: 2.5rem;
+}
+.header__text h3 {
+  font-size: 2rem;
+  padding: 1.5em 0;
+}
+.header__text p {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+.header__text button {
+  display: none;
+  margin: 2em 0 0 0;
+  padding: 0.7em 1em;
+  border: 1px solid #292929;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #292929;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: background-color 0.4s;
+  cursor: pointer;
+}
+.header__text button:hover {
+  background-color: #806e2d;
+}
+
+.main h2 {
+  font-size: 3rem;
+  padding: 2em 0;
+  text-align: center;
+}
+.main .course {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  scroll-margin-top: 22rem;
+}
+.main .course .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 4px solid #292929;
+  border-radius: 8px;
+  background-color: white;
+  transition: 0.3s;
+  margin: 2em;
+  cursor: pointer;
+  width: 32rem;
+  height: 54rem;
+}
+.main .course .card:hover {
+  border: 4px solid #806e2d;
+}
+.main .course .card:hover h2 {
+  color: #806e2d;
+}
+.main .course .card:hover a {
+  background-color: #806e2d;
+}
+.main .course .card img {
+  width: 80%;
+  padding: 3.5em 0;
+}
+.main .course .card h2 {
+  font-size: 3rem;
+  flex-wrap: wrap;
+  padding: 1em 1em 2em 1em;
+}
+.main .course .card a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #292929;
+  color: #ffffff;
+  width: 100%;
+  height: 3rem;
+  padding: 1em 0 2em 0;
+  position: absolute;
+  bottom: 0;
+}
+.main .course .second img {
+  width: 10rem;
+  padding: 2em 0 0 0;
+}
+.main .course .second h2 {
+  font-size: 2rem;
+  padding-bottom: 0;
+}
+.main .course .second p {
+  font-size: 1.5rem;
+  padding: 2em 1em;
+}
+.main .course .second span {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 2em;
+}
+.main .about-us {
+  scroll-margin-top: 22rem;
+}
+.main .about-us__text {
+  padding: 1em 2em;
+}
+.main .about-us__text h3 {
+  font-size: 2rem;
+}
+.main .about-us__text p {
+  font-size: 1.3rem;
+  padding: 2em 0;
+}
+.main .about-us__info {
+  text-align: center;
+  padding: 1em 2em;
+}
+.main .about-us__info img {
+  width: 9rem;
+}
+.main .about-us__info h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.main .about-us__info p {
+  font-size: 1.3rem;
+}
+.main .about-us__info i {
+  font-size: 2rem;
+}
+.main .about-us__info__bartosh {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  padding: 2em 0;
+}
+.main .about-us__info__bartosh__text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+}
+.main .about-us__info__igor {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+}
+.main .trener {
+  scroll-margin-top: 22rem;
+}
+.main .trener__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .trener__img img {
+  width: 50%;
+}
+.main .trener__text {
+  padding: 1em 2em;
+}
+.main .trener__text h3 {
+  font-size: 2rem;
+  padding: 1em 0;
+}
+.main .trener__text p {
+  font-size: 1.5rem;
+}
+.main .trener__text__person {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+}
+.main .trener__text__person img {
+  width: 10rem;
+}
+.main .trener__text__person p {
+  font-size: 1.5rem;
+}
+.main .trener__text__person h4 {
+  font-size: 1.5rem;
+  padding: 1em 0;
+}
+.main .trener__text__person .size {
+  width: 15rem;
+  padding: 1em;
+}
+.main .heading-color {
+  background-color: rgba(0, 0, 0, 0.096);
+  padding: 1em 1em;
+}
+.main .true-quality {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.096);
+  padding: 2em 0;
+}
+.main .true-quality__img img {
+  width: 25rem;
+  padding: 2em 0;
+}
+.main .true-quality__text {
+  padding: 1em 2em;
+}
+.main .true-quality__text h3 {
+  font-size: 2.5rem;
+  padding: 1em 0;
+}
+.main .true-quality__text p {
+  font-size: 1.6rem;
+}
+.main .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+.main .login__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 60rem;
+  background-color: rgba(0, 0, 0, 0.096);
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px;
+}
+.main .login__box h2 {
+  padding: 1em 0;
+}
+.main .login__box input {
+  position: relative;
+  height: 5rem;
+  border: none;
+  width: 20rem;
+  padding: 2em 1em 0.5em 0.5em;
+  border-bottom: 2px solid black;
+  border-radius: 2px;
+  outline: none;
+}
+.main .login__box label {
+  position: absolute;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5em;
+  z-index: 10;
+}
+.main .login__box button {
+  padding: 0.7em 1em;
+  border: 1px solid #292929;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #292929;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: background-color 0.4s;
+  cursor: pointer;
+}
+.main .login__box button:hover {
+  background-color: #806e2d;
+}
+.main .login__box p {
+  text-align: center;
+  font-size: 2rem;
+  color: #292929;
+  padding: 0.5em 0;
+}
+.main .login__box p a {
+  text-decoration: none;
+  color: #806e2d;
+}
+.main .login__box__password {
+  padding: 2em;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.096);
+}
+.footer__one {
+  padding: 2em 0;
+}
+.footer__one__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__one__logo img {
+  width: 10rem;
+  height: 7rem;
+}
+.footer__one__logo h3 {
+  font-size: 2rem;
+}
+.footer__one__text {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.footer__one__text p {
+  padding: 2em 0;
+}
+.footer__two {
+  display: flex;
+  flex-direction: column;
+}
+.footer__two a {
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 0.5em 0;
+  color: #292929;
+  transition: color 0.3s;
+}
+.footer__two a:hover {
+  color: #806e2d;
+}
+
+.active {
+  transform: translateX(-10px);
+}
+
+.main .course-main__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 2em;
+}
+.main .course-main__top__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 4px solid #292929;
+  border-radius: 8px;
+  background-color: white;
+  transition: 0.3s;
+  margin: 2em;
+  width: 30rem;
+  height: 40rem;
+}
+.main .course-main__top__card h3 {
+  padding: 1em 2em 0 2em;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #292929;
+}
+.main .course-main__top__text {
+  text-align: center;
+  padding: 2em 2em;
+  font-size: 1.5rem;
+}
+.main .course-main__top__text h3 {
+  font-size: 2rem;
+}
+.main .course-main__top__text p {
+  font-size: 1.7rem;
+  padding: 2em 0;
+  letter-spacing: 1px;
+}
+.main .course-main__top__text__delivery {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 15rem;
+}
+.main .course-main__top__text__delivery i {
+  font-size: 3rem;
+  color: #806e2d;
+}
+.main .course-main__top__text__delivery p {
+  padding: 0;
+  font-size: 1.3rem;
+  padding: 1em 0;
+}
+.main .course-main__top__text__delivery span {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.main .course-main__top__text__delivery button {
+  margin: 2em 0 0 0;
+  padding: 0.7em 1em;
+  border: 1px solid #292929;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #292929;
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 20rem;
+  letter-spacing: 1px;
+  transition: background-color 0.4s;
+  cursor: pointer;
+}
+.main .course-main__top__text__delivery button:hover {
+  background-color: #806e2d;
+}
+.main .course-main__bottom {
+  background-color: rgba(0, 0, 0, 0.096);
+  padding: 2em 1.5em;
+}
+.main .course-main__bottom h3 {
+  font-size: 2rem;
+  padding: 1.5em 0;
+}
+.main .course-main__bottom__description {
+  font-size: 1.7rem;
+}
+.main .course-main__bottom__description p {
+  letter-spacing: 1px;
+  padding: 1em 0;
+}
+.main .course-main__bottom__offer {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1rem;
+  width: 100%;
+}
+.main .course-main__bottom__offer p {
+  font-size: 1.2rem;
+}
+.main .course-main__bottom__offer__one {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1em 2em;
+}
+.main .course-main__bottom__offer__two {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1em 2em;
+}
+.main .course-main__bottom__learning {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  color: #806e2d;
+}
+.main .course-main__bottom__learning__item {
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
+}
+.main .course-main__bottom__learning__item i {
+  color: #806e2d;
+  padding-right: 0.5em;
+  font-size: 3rem;
+}
+.main .course-main__bottom__appearance {
+  font-size: 1.6rem;
+}
+.main .course-main__bottom__appearance__text p {
+  padding: 1em 0;
+}
+.main .course-main__bottom__appearance__img img {
+  width: 90%;
+}
+.main .course-main__bottom__trener img {
+  width: 25%;
+}
+.main .course-main__bottom__trener h4 {
+  font-size: 2rem;
+  text-align: center;
+}
+.main .course-main__bottom__trener__text {
+  font-size: 1.6rem;
+  padding-bottom: 2em;
+}
+.main .course-main__bottom__trener__info {
+  padding-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.main .course-main__bottom__trener__decision {
+  text-align: center;
+}
+.main .course-main__bottom__trener__decision button {
+  padding: 0.7em 1em;
+  border: 1px solid #292929;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #292929;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: background-color 0.4s;
+  cursor: pointer;
+}
+.main .course-main__bottom__trener__decision button:hover {
+  background-color: #806e2d;
+}
+
+.not-this {
+  padding: 1em 2em;
+}
+.not-this h3 {
+  font-size: 2rem;
+  padding: 1em 0;
+}
+.not-this p {
+  font-size: 1.6rem;
+  color: #292929;
+}
+
+.size-offer {
+  width: 30%;
+}
+
+@media (min-width: 610px) {
+  .main .login__box {
+    width: 549px;
+  }
+  .main .login__box p {
+    padding: 1em 7em;
+  }
+}
+@media (min-width: 900px) {
+  .nav__arrow {
+    display: none;
+  }
+  .nav__home {
+    display: flex;
+  }
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .header__img img {
+    height: 35rem;
+    align-self: flex-end;
+  }
+  .header__text {
+    padding: 3em 0 3em 3em;
+  }
+  .header__text h1 {
+    font-size: 2.5rem;
+  }
+  .header__text h3 {
+    font-size: 2.3rem;
+  }
+  .header__text p {
+    font-size: 2.5rem;
+  }
+  .header__text button {
+    display: flex;
+  }
+  .main h2 {
+    font-size: 4rem;
+  }
+  .main .course {
+    scroll-margin-top: 25rem;
+  }
+  .main .about-us {
+    scroll-margin-top: 25rem;
+  }
+  .main .about-us__text {
+    padding: 1em 4em;
+  }
+  .main .about-us__text h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .main .about-us__text p {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  .main .about-us__info img {
+    width: 15rem;
+  }
+  .main .about-us__info h4 {
+    font-size: 2rem;
+  }
+  .main .about-us__info i {
+    font-size: 4rem;
+  }
+  .main .about-us__info p {
+    font-size: 2rem;
+  }
+  .main .about-us__info__bartosh {
+    display: flex;
+    justify-content: center;
+  }
+  .main .about-us__info__igor {
+    display: flex;
+    justify-content: center;
+  }
+  .main .trener {
+    display: flex;
+    flex-direction: row-reverse;
+    scroll-margin-top: 25rem;
+  }
+  .main .trener__img img {
+    width: 42rem;
+    align-self: flex-end;
+    padding-bottom: 4em;
+  }
+  .main .trener__text {
+    padding: 1em 0 1em 4em;
+  }
+  .main .trener__text h3 {
+    font-size: 2.5rem;
+  }
+  .main .trener__text p {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  .main .trener__text__person {
+    max-width: 75%;
+  }
+  .main .trener__text__person p {
+    font-size: 1.5rem;
+  }
+  .main .trener__text__person img {
+    transition: scale 0.3s;
+    cursor: pointer;
+  }
+  .main .trener__text__person img:hover {
+    scale: 1.2;
+  }
+  .main .true-quality {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .true-quality__img img {
+    width: 35rem;
+  }
+  .main .true-quality__text h3 {
+    font-weight: 600;
+  }
+  .main .true-quality__text p {
+    letter-spacing: 1px;
+  }
+  .main .course-main__top {
+    display: flex;
+    flex-direction: row;
+  }
+  .main .course-main__bottom {
+    padding: 1em 3em;
+  }
+  .main .course-main__bottom__offer {
+    flex-direction: row;
+  }
+  .main .course-main__bottom__learning {
+    padding: 0 1.5em;
+  }
+  .main .course-main__bottom__trener h4 {
+    font-size: 3rem;
+  }
+  .main .course-main__bottom__trener__info {
+    font-size: 2.5rem;
+  }
+  .main .course-main__bottom__trener__info img {
+    width: 20%;
+  }
+  .main .course-main__bottom__trener__info i {
+    font-size: 4rem;
+  }
+  .main .course-main__bottom__trener__decision {
+    padding: 4em 0;
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em 5em;
+  }
+  .footer__one {
+    text-align: left;
+  }
+  .footer__one__logo {
+    width: 20rem;
+    padding: 2em 0;
+  }
+  .footer__two {
+    text-align: right;
+    align-self: flex-end;
+  }
+}
+@media (min-width: 1169px) {
+  .nav__item {
+    display: flex;
+  }
+  .nav__bars {
+    display: none;
+  }
+  .main .course-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .course-main__top {
+    max-width: 120rem;
+  }
+  .main .course-main__top__card {
+    width: 120rem;
+  }
+  .main .course-main__bottom__appearance__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .course-main__bottom__appearance__img img {
+    width: 50%;
+  }
+  .main .course-main__bottom__trener {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .course-main__bottom__trener__info {
+    width: 80rem;
+  }
+}
+@media (min-width: 1400px) {
+  .main .course .card {
+    width: 32rem;
+    height: 55rem;
+    padding: 0;
+  }
+  .main .about-us {
+    display: flex;
+  }
+  .main .about-us__text {
+    width: 50%;
+  }
+  .main .about-us__text h3 {
+    font-size: 3rem;
+  }
+  .main .about-us__info {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .about-us__info__bartosh {
+    width: 100%;
+    margin-bottom: 7em;
+  }
+  .main .about-us__info__bartosh__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .about-us__info__bartosh__text .rank {
+    padding: 0em 4em;
+  }
+  .main .about-us__info__igor {
+    width: 100%;
+  }
+  .main .about-us .true-quality__img img {
+    width: 50rem;
+    padding: 0em 2em;
+  }
+  .main .about-us .true-quality h3 {
+    font-size: 3rem;
+  }
+  .main .about-us .true-quality p {
+    font-size: 2rem;
+  }
+  .main .course-main__bottom__learning {
+    flex-direction: row;
+  }
+  .main .course-main__bottom__learning__item {
+    padding: 0em 2em;
+  }
+}/*# sourceMappingURL=style.css.map */
